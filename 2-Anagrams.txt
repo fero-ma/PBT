@@ -1,0 +1,19 @@
+//Anagrams
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Anagram{
+     public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        char[] string1 = sc.nextLine().toLowerCase().toCharArray();
+        char[] string2 = sc.nextLine().toLowerCase().toCharArray();
+        Arrays.sort(string1);
+        Arrays.sort(string2);
+        if(String.valueOf(string1).equals(String.valueOf(string2)))
+            System.out.print("Anagrams!");
+        else
+            System.out.print("Not anagrams!");
+        
+     }
+}

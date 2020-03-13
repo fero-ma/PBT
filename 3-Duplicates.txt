@@ -1,0 +1,36 @@
+// Duplicates in array
+
+import java.util.*;
+
+public class Duplicates{
+    public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+    	int size = sc.nextInt();
+    	
+	System.out.println("Enter size: ");
+	    
+    	int[] arr = new int[size];
+    	
+    	HashSet<Integer> set = new HashSet<Integer>();
+    	
+	System.out.println("Enter elements:");
+	    
+	HashSet<Integer> duplicates = new HashSet<Integer>();
+	    
+    	for(int i=0; i<size; i++) {
+    	    arr[i] = sc.nextInt();
+    		if(set.contains(arr[i]))
+    		    duplicates.add(arr[i]);
+    		else
+    		    set.add(arr[i]);
+    	}
+    	
+    	
+    	System.out.print("Duplicates: ");
+    	
+        Iterator<Integer> i = set.iterator(); 
+        while (i.hasNext()) 
+            System.out.print(i.next()+" ");
+    		    
+    }
+}
